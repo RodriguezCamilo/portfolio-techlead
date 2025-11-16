@@ -1,0 +1,60 @@
+---
+const jobs = [
+  {
+    company: "Turing To The Future",
+    role: "Associate Technology Director (Part-Time)",
+    period: "Feb 2025 – Present",
+    bullets: [
+      "Defined architecture, tech roadmap and CI/CD standards for client projects.",
+      "Provided technical leadership and mentorship to the dev team (PRs, documentation, best practices).",
+      "Designed and validated internal MVPs aligned with business goals."
+    ]
+  },
+  {
+    company: "Objective",
+    role: "Full-Stack Developer & Co-Founder",
+    period: "Jan 2024 – Present",
+    bullets: [
+      "End-to-end development of web apps, SaaS and MVPs for clients.",
+      "Database design (Supabase/PostgreSQL) and deployments to Vercel/Render.",
+      "Implemented authentication (JWT/OAuth), payments (Stripe/MercadoPago), roles and dashboards."
+    ]
+  },
+  {
+    company: "MindUp",
+    role: "Frontend Developer (MVP Project)",
+    period: "Sep 2024 – Nov 2024",
+    bullets: [
+      "Built a HealthTech MVP from scratch in 2 months.",
+      "Developed UI, global state (Zustand), routing (React Router) and REST API integration with JWT.",
+      "Worked closely with the business team to iterate on demos and idea validation."
+    ]
+  }
+];
+---
+
+<section id="experience" class="py-10 border-t border-slate-800/60">
+  <header class="mb-6">
+    <h2 class="text-xl md:text-2xl font-semibold text-slate-50">Experience</h2>
+    <p class="text-sm text-slate-400 mt-1 max-w-xl">
+      Roles where I took technical decisions, built product and collaborated with business and cross-functional teams.
+    </p>
+  </header>
+
+  <div class="space-y-4">
+    {jobs.map((job) => (
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+        <div class="flex justify-between gap-3 mb-1">
+          <div>
+            <h3 class="text-sm font-semibold text-slate-50">{job.role}</h3>
+            <p class="text-xs text-slate-400">{job.company}</p>
+          </div>
+          <p class="text-xs text-slate-500 whitespace-nowrap">{job.period}</p>
+        </div>
+        <ul class="mt-2 text-xs text-slate-300 space-y-1.5">
+          {job.bullets.map((b) => <li>• {b}</li>)}
+        </ul>
+      </article>
+    ))}
+  </div>
+</section>

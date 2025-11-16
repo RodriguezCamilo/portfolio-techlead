@@ -2,12 +2,12 @@
 import "../styles/global.css";
 const {
   title = "Camilo Cea Rodríguez — Full-Stack Web Developer",
-  description = "Full-Stack Web Developer orientado a producto, SaaS y MVPs para startups. Next.js, Astro, TypeScript, Supabase.",
+  description = "Product-oriented Full-Stack Web Developer focused on SaaS and MVPs for startups. Next.js, Astro, TypeScript, Supabase.",
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <title>{title}</title>
@@ -15,7 +15,7 @@ const {
     <meta
       name="description"
       content={description ??
-        "Full-Stack Web Developer orientado a producto, SaaS y MVPs para startups. Next.js, Astro, TypeScript, Supabase."}
+        "Product-oriented Full-Stack Web Developer focused on SaaS and MVPs for startups. Next.js, Astro, TypeScript, Supabase."}
     />
 
     <!-- Open Graph -->
@@ -24,9 +24,9 @@ const {
     <meta
       property="og:description"
       content={description ??
-        "Full-Stack Web Developer orientado a producto, SaaS y MVPs."}
+        "Product-oriented Full-Stack Web Developer focused on SaaS and MVPs."}
     />
-    <meta property="og:url" content="https://TU-DOMINIO.dev" />
+    <meta property="og:url" content="https://TU-DOMINIO.dev/en" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -34,7 +34,7 @@ const {
     <meta
       name="twitter:description"
       content={description ??
-        "Full-Stack Web Developer orientado a SaaS y startups."}
+        "Product-oriented Full-Stack Web Developer focused on SaaS and startups."}
     />
   </head>
 
@@ -55,47 +55,47 @@ const {
           {/* Desktop nav */}
           <div class="hidden sm:flex items-center gap-6 text-sm text-slate-300">
             <a href="#projects" class="hover:text-sky-400 transition-colors">
-              Proyectos
+              Projects
             </a>
             <a href="#experience" class="hover:text-sky-400 transition-colors">
-              Experiencia
+              Experience
             </a>
             <a href="#stack" class="hover:text-sky-400 transition-colors">
               Stack
             </a>
             <a href="#contact" class="hover:text-sky-400 transition-colors">
-              Contacto
+              Contact
             </a>
 
             {/* Language switch */}
             <div class="flex items-center gap-2 text-xs">
+              <a
+                href="/"
+                class="px-2 py-1 rounded-full border border-slate-700 text-slate-300 hover:border-sky-400 hover:text-sky-400 transition-colors"
+              >
+                ES
+              </a>
               <span
                 class="px-2 py-1 rounded-full bg-sky-500/10 border border-sky-500/40 text-sky-300"
               >
-                ES
-              </span>
-              <a
-                href="/en"
-                class="px-2 py-1 rounded-full border border-slate-700 text-slate-300 hover:border-sky-400 hover:text-sky-400 transition-colors"
-              >
                 EN
-              </a>
+              </span>
             </div>
           </div>
 
-          {/* Mobile lang switch (simple) */}
+          {/* Mobile lang switch */}
           <div class="sm:hidden flex items-center gap-2 text-xs text-slate-300">
+            <a
+              href="/"
+              class="px-2 py-1 rounded-full border border-slate-700 hover:border-sky-400 hover:text-sky-400 transition-colors"
+            >
+              ES
+            </a>
             <span
               class="px-2 py-1 rounded-full bg-sky-500/10 border border-sky-500/40 text-sky-300"
             >
-              ES
-            </span>
-            <a
-              href="/en"
-              class="px-2 py-1 rounded-full border border-slate-700 hover:border-sky-400 hover:text-sky-400 transition-colors"
-            >
               EN
-            </a>
+            </span>
           </div>
         </nav>
       </header>

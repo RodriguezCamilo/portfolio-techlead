@@ -1,0 +1,103 @@
+---
+const projects = [
+  {
+    id: "mi-gimnasio-online",
+    name: "Mi Gimnasio Online",
+    badge: "SaaS in production",
+    role: "Lead architect & main developer",
+    description:
+      "SaaS platform for personal trainers: client management, workout plans and subscriptions, with 200+ monthly users.",
+    tech: ["Next.js", "Supabase", "Node.js", "Stripe", "MercadoPago", "Vercel", "Render"],
+    highlights: [
+      "Recurring payments fully automated (Stripe + MercadoPago).",
+      "End-to-end architecture, database design and deployment."
+    ],
+    link: "https://misrutinasonline.com"
+  },
+  {
+    id: "narutrad",
+    name: "NaruTrad",
+    badge: "Own SaaS — In development",
+    role: "Founder & Full-Stack Developer",
+    description:
+      "AI-assisted platform for manga and comic translation, oriented to translators and content creators.",
+    tech: ["Next.js", "Supabase", "TypeScript", "AI APIs"],
+    highlights: [
+      "Niche product design + initial SaaS architecture.",
+      "Full flow ownership: upload, processing and chapter delivery."
+    ],
+    link: null
+  },
+  {
+    id: "carved-shadows",
+    name: "Carved Shadows",
+    badge: "Academic project — EVA 2024",
+    role: "Game Programmer (Unity/C#)",
+    description:
+      "Psychological horror game developed in a 10-person multidisciplinary team, officially showcased at EVA 2024.",
+    tech: ["Unity", "C#", "Game Design", "Internal tools"],
+    highlights: [
+      "Gameplay systems and level logic programming.",
+      "Close collaboration with art, narrative and production teams."
+    ],
+    link: null
+  }
+];
+---
+
+<section id="projects" class="py-10 border-t border-slate-800/60">
+  <header class="mb-6">
+    <h2 class="text-xl md:text-2xl font-semibold text-slate-50">Selected projects</h2>
+    <p class="text-sm text-slate-400 mt-1 max-w-xl">
+      A few products where I applied my full-stack, architecture and product mindset.
+    </p>
+  </header>
+
+  <div class="grid gap-6 md:grid-cols-2">
+    {projects.map((project) => (
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 flex flex-col h-full">
+        <div class="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <h3 class="text-base font-semibold text-slate-50">{project.name}</h3>
+            <p class="text-xs text-slate-400">{project.role}</p>
+          </div>
+          <span class="text-[10px] rounded-full bg-sky-500/10 border border-sky-500/40 text-sky-300 px-3 py-1">
+            {project.badge}
+          </span>
+        </div>
+
+        <p class="text-sm text-slate-300 mb-3">
+          {project.description}
+        </p>
+
+        <ul class="text-xs text-slate-300 space-y-1 mb-3">
+          {project.highlights.map((h) => <li>• {h}</li>)}
+        </ul>
+
+        <div class="mt-auto pt-3 border-t border-slate-800">
+          <p class="text-[11px] text-slate-400 mb-1">Tech stack:</p>
+          <div class="flex flex-wrap gap-1.5 text-[11px]">
+            {project.tech.map((t) => (
+              <span class="rounded-full bg-slate-800 px-2.5 py-1 text-slate-200">
+                {t}
+              </span>
+            ))}
+          </div>
+
+          {project.link && (
+            <div class="mt-3">
+              <a
+                href={project.link}
+                class="text-xs text-sky-400 hover:text-sky-300 underline underline-offset-4"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View product
+              </a>
+            </div>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

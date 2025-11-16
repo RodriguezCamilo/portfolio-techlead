@@ -1,0 +1,50 @@
+---
+const email = "rodriguezcamilotrabajo@gmail.com";
+const linkedin = "https://linkedin.com/in/rocamilo";
+const github = "https://github.com/RodriguezCamilo";
+---
+
+<section id="contact" class="py-10 border-t border-slate-800/60">
+  <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 md:p-8">
+    <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-2">
+      Let’s talk
+    </h2>
+    <p class="text-sm text-slate-300 max-w-xl mb-4">
+      If you’re building a SaaS product, an MVP or you need someone to own the full-stack
+      from end to end, I’d be happy to talk. I’m open to fully remote roles as a
+      Full-Stack Developer, Senior Engineer or Tech Lead.
+    </p>
+
+    <div class="flex flex-wrap gap-3 text-sm">
+      <a
+        href={`mailto:${email}`}
+        class="inline-flex items-center rounded-full bg-sky-500 px-4 py-2 font-medium text-slate-950 hover:bg-sky-400 transition-colors"
+      >
+        Email me
+      </a>
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 text-slate-200 hover:border-sky-400 hover:text-sky-400 transition-colors"
+      >
+        View LinkedIn
+      </a>
+      <a
+        href={github}
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 text-slate-200 hover:border-sky-400 hover:text-sky-400 transition-colors"
+      >
+        View GitHub
+      </a>
+      <a
+        href="/Camilo-Cea-Rodriguez-CV.pdf"
+        download
+        class="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 text-slate-200 hover:border-sky-400 hover:text-sky-400 transition-colors"
+      >
+        Download CV
+      </a>
+    </div>
+  </div>
+</section>
