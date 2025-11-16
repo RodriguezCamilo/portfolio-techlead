@@ -1,22 +1,42 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import "../styles/global.css";
+const { title = "Camilo Cea Rodríguez — Full-Stack Web Developer", description = "Full-Stack Web Developer orientado a producto, SaaS y MVPs para startups. Next.js, Astro, TypeScript, Supabase." } = Astro.props;
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+  </head>
+  <body class="bg-slate-950 text-slate-50 antialiased">
+    <div class="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <header class="sticky top-0 z-20 backdrop-blur bg-slate-950/70 border-b border-slate-800">
+        <nav class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+          <a href="#top" class="font-semibold tracking-tight text-slate-100">
+            Camilo<span class="text-sky-400">.</span>
+          </a>
+          <div class="hidden sm:flex gap-6 text-sm text-slate-300">
+            <a href="#projects" class="hover:text-sky-400 transition-colors">Proyectos</a>
+            <a href="#experience" class="hover:text-sky-400 transition-colors">Experiencia</a>
+            <a href="#stack" class="hover:text-sky-400 transition-colors">Stack</a>
+            <a href="#contact" class="hover:text-sky-400 transition-colors">Contacto</a>
+          </div>
+        </nav>
+      </header>
+
+      <main id="top" class="max-w-5xl mx-auto px-4 pb-16 pt-8">
+        <slot />
+      </main>
+
+      <footer class="border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 py-6 text-xs text-slate-400 flex flex-wrap items-center justify-between gap-2">
+          <span>© {new Date().getFullYear()} Camilo Cea Rodríguez.</span>
+          <span>Full-Stack · SaaS · Startups</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

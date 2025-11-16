@@ -1,0 +1,103 @@
+---
+const projects = [
+  {
+    id: "mi-gimnasio-online",
+    name: "Mi Gimnasio Online",
+    badge: "SaaS en producción",
+    role: "Arquitecto y desarrollador principal",
+    description:
+      "Plataforma SaaS para entrenadores: gestión de clientes, rutinas y suscripciones, con más de 200 usuarios mensuales.",
+    tech: ["Next.js", "Supabase", "Node.js", "Stripe", "MercadoPago", "Vercel", "Render"],
+    highlights: [
+      "Pagos recurrentes automatizados (Stripe + MercadoPago).",
+      "Diseño de arquitectura, BBDD y despliegue end-to-end."
+    ],
+    link: null // cuando tengas landing / demo, poné la URL
+  },
+  {
+    id: "narutrad",
+    name: "NaruTrad",
+    badge: "SaaS propio — En desarrollo",
+    role: "Founder & Full-Stack Developer",
+    description:
+      "Plataforma de traducción de cómics y mangas asistida por IA, orientada a traductores y creadores de contenido.",
+    tech: ["Next.js", "Supabase", "TypeScript", "IA APIs"],
+    highlights: [
+      "Diseño de producto nicho + arquitectura inicial SaaS.",
+      "Foco en flujo completo: carga, procesamiento y entrega de capítulos."
+    ],
+    link: null
+  },
+  {
+    id: "carved-shadows",
+    name: "Carved Shadows",
+    badge: "Proyecto académico — EVA 2024",
+    role: "Game Programmer (Unity/C#)",
+    description:
+      "Videojuego de terror psicológico desarrollado en equipo multidisciplinario de 10 personas, presentado en la EVA 2024.",
+    tech: ["Unity", "C#", "Game Design", "Herramientas internas"],
+    highlights: [
+      "Programación de sistemas de gameplay y lógica de nivel.",
+      "Trabajo en equipo con arte, narrativa y producción."
+    ],
+    link: null
+  }
+];
+---
+
+<section id="projects" class="py-10 border-t border-slate-800/60">
+  <header class="mb-6">
+    <h2 class="text-xl md:text-2xl font-semibold text-slate-50">Proyectos seleccionados</h2>
+    <p class="text-sm text-slate-400 mt-1 max-w-xl">
+      Algunos de los productos y proyectos donde apliqué mi enfoque full-stack, de arquitectura y de producto.
+    </p>
+  </header>
+
+  <div class="grid gap-6 md:grid-cols-2">
+    {projects.map((project) => (
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 flex flex-col h-full">
+        <div class="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <h3 class="text-base font-semibold text-slate-50">{project.name}</h3>
+            <p class="text-xs text-slate-400">{project.role}</p>
+          </div>
+          <span class="text-[10px] rounded-full bg-sky-500/10 border border-sky-500/40 text-sky-300 px-3 py-1">
+            {project.badge}
+          </span>
+        </div>
+
+        <p class="text-sm text-slate-300 mb-3">
+          {project.description}
+        </p>
+
+        <ul class="text-xs text-slate-300 space-y-1 mb-3">
+          {project.highlights.map((h) => <li>• {h}</li>)}
+        </ul>
+
+        <div class="mt-auto pt-3 border-t border-slate-800">
+          <p class="text-[11px] text-slate-400 mb-1">Stack:</p>
+          <div class="flex flex-wrap gap-1.5 text-[11px]">
+            {project.tech.map((t) => (
+              <span class="rounded-full bg-slate-800 px-2.5 py-1 text-slate-200">
+                {t}
+              </span>
+            ))}
+          </div>
+
+          {project.link && (
+            <div class="mt-3">
+              <a
+                href={project.link}
+                class="text-xs text-sky-400 hover:text-sky-300 underline underline-offset-4"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver demo / más detalles
+              </a>
+            </div>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

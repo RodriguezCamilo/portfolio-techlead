@@ -1,0 +1,60 @@
+---
+const jobs = [
+  {
+    company: "Turing To The Future",
+    role: "Subdirector de Tecnología (Part-Time)",
+    period: "Feb 2025 – Presente",
+    bullets: [
+      "Definición de arquitectura, roadmap tecnológico y estándares de CI/CD.",
+      "Liderazgo técnico y mentoría del equipo de desarrollo (PRs, documentación, buenas prácticas).",
+      "Diseño y validación de MVPs internos alineados a objetivos de negocio."
+    ]
+  },
+  {
+    company: "Objective",
+    role: "Full-Stack Developer & Co-Founder",
+    period: "Ene 2024 – Presente",
+    bullets: [
+      "Desarrollo end-to-end de aplicaciones web, SaaS y MVPs para clientes.",
+      "Diseño de BBDD (Supabase/PostgreSQL) y despliegues en Vercel/Render.",
+      "Implementación de autenticación (JWT/OAuth), pagos (Stripe/MercadoPago), roles y dashboards."
+    ]
+  },
+  {
+    company: "MindUp",
+    role: "Frontend Developer (Proyecto MVP)",
+    period: "Mar 2024 – Dic 2024",
+    bullets: [
+      "Construcción del MVP HealthTech desde cero en ~9 meses.",
+      "Desarrollo de UI, estado global (Zustand), routing (React Router) e integración de APIs REST con JWT.",
+      "Trabajo cercano con negocio para iterar sobre demos y validación de la idea."
+    ]
+  }
+];
+---
+
+<section id="experience" class="py-10 border-t border-slate-800/60">
+  <header class="mb-6">
+    <h2 class="text-xl md:text-2xl font-semibold text-slate-50">Experiencia</h2>
+    <p class="text-sm text-slate-400 mt-1 max-w-xl">
+      Roles donde tomé decisiones técnicas, construí producto y coordiné con negocio y equipo.
+    </p>
+  </header>
+
+  <div class="space-y-4">
+    {jobs.map((job) => (
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+        <div class="flex justify-between gap-3 mb-1">
+          <div>
+            <h3 class="text-sm font-semibold text-slate-50">{job.role}</h3>
+            <p class="text-xs text-slate-400">{job.company}</p>
+          </div>
+          <p class="text-xs text-slate-500 whitespace-nowrap">{job.period}</p>
+        </div>
+        <ul class="mt-2 text-xs text-slate-300 space-y-1.5">
+          {job.bullets.map((b) => <li>• {b}</li>)}
+        </ul>
+      </article>
+    ))}
+  </div>
+</section>
