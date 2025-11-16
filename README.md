@@ -1,46 +1,52 @@
-# Astro Starter Kit: Basics
+# Camilo Cea Rodríguez — Full-Stack Web Developer (Portfolio)
 
-```sh
-npm create astro@latest -- --template basics
-```
+> 🇪🇸 Este es mi portfolio profesional como Full-Stack Developer orientado a producto, SaaS y startups.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This repository contains my personal portfolio site, built to present myself as a **product-oriented Full-Stack Web Developer** focused on **SaaS, MVPs and startup environments**.
 
-## 🚀 Project Structure
+The site is bilingual (**Spanish/English**) and is the main public entry point I share with recruiters, founders and CTOs.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## Features
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- **Bilingual**: `/` in Spanish and `/en` in English.
+- **Clear positioning**: focused on Full-Stack, SaaS and technical leadership.
+- **Selected projects**:
+  - **Mi Gimnasio Online** (production SaaS for trainers).
+  - **NaruTrad** (AI-assisted manga translation SaaS, WIP).
+  - **Carved Shadows** (horror game showcased at EVA 2024).
+- **Experience section** with my roles at:
+  - Turing To The Future (Associate Technology Director).
+  - Objective (Full-Stack Developer & Co-Founder).
+  - MindUp (Frontend for a HealthTech MVP).
+- **Tech stack & “how I work”** section (core tech + soft skills).
+- **Contact section** with mail, LinkedIn and GitHub.
+- **Downloadable CV (PDF)** directly from the site.
+- Responsive, dark theme, minimal and focused on readability.
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## Tech Stack
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Framework**: [Astro](https://astro.build/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Language**: TypeScript (where applicable) / modern JavaScript
+- **Deployment**: (e.g. Vercel, Netlify or similar — depending on where it’s hosted)
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
